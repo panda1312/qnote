@@ -30,9 +30,11 @@ function App() {
   }, [])
 
   return (
-    <main className="container">
-      <Header />
-      <ThemeToggle />
+   <main className="container">
+      <div className="header-bar">
+        <Header />
+        <ThemeToggle />
+      </div>
       <NoteInput input={input} setInput={setInput} addNote={addNote} />
       <NoteList notes={notes} />
     </main>
