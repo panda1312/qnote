@@ -5,13 +5,13 @@ function App() {
   const [input, setInput] = useState("");
 
   const fetchNotes = async () => {
-    const res = await fetch("http://localhost:5000/api/notes");
+    const res = await fetch("http://localhost:5111/api/notes");
     const data = await res.json();
     setNotes(data);
   };
 
   const addNote = async () => {
-    await fetch("http://localhost:5000/api/notes", {
+    await fetch("http://localhost:5111/api/notes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: input }),
