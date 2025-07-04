@@ -1,10 +1,20 @@
 version: '3.8'
+
+networks:
+  quicknotes-net:
+    driver: bridge
+
 services:
   backend:
     build: ./backend
     ports:
       - "5111:5111"
+    networks:
+      - quicknotes-net
   frontend:
     build: ./frontend
     ports:
       - "3111:3111"
+    networks:
+      - quicknotes-net
+      
