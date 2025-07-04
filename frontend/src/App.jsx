@@ -38,6 +38,7 @@ function App() {
   }, [])
 
   return (
+    console.log("VITE_BACKEND_URL:", import.meta.env.VITE_BACKEND_URL);
    <main className="container">
       <div className="header-bar">
         <Header />
