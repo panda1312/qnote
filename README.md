@@ -27,7 +27,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The backend will start on [http://localhost:5000](http://localhost:5000)
+The backend will start on [http://localhost:5000](http://localhost:5111)
 
 2. **Frontend Setup**
 
@@ -37,7 +37,7 @@ npm install
 npm run dev
 ```
 
-The frontend will run on [http://localhost:3000](http://localhost:3000)
+The frontend will run on [http://localhost:3000](http://localhost:3111)
 
 ---
 
@@ -49,8 +49,8 @@ From the root folder:
 docker-compose up --build
 ```
 
-- Frontend: [http://localhost:3000](http://localhost:3000)
-- Backend API: [http://localhost:5000/api/notes](http://localhost:5000/api/notes)
+- Frontend: [http://localhost:3111](http://localhost:3111)
+- Backend API: [http://localhost:5111/api/notes](http://localhost:5111/api/notes)
 
 ---
 
