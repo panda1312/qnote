@@ -25,6 +25,14 @@ function App() {
     fetchNotes()
   }
 
+  const deleteNote = async (id) => {
+    await fetch(`http://localhost:5111/api/notes/${id}`, {
+      method: "DELETE",
+    })
+    fetchNotes()
+  }
+
+  
   useEffect(() => {
     fetchNotes()
   }, [])
@@ -36,7 +44,7 @@ function App() {
         <ThemeToggle />
       </div>
       <NoteInput input={input} setInput={setInput} addNote={addNote} />
-      <NoteList notes={notes} />
+      <NoteList notes={notes} onDelete={deleteNote} />
     </main>
   )
 }
