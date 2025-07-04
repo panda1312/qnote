@@ -20,12 +20,16 @@ body {
 
 .theme-toggle {
   background: none;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius);
+  border: none;
+  font-size: 1.5rem;
   cursor: pointer;
   margin-bottom: 1rem;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
 }
 
 .container {
