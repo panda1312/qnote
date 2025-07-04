@@ -9,9 +9,20 @@ function ThemeToggle() {
     else setTheme("light")
   }
 
+  const getIcon = () => {
+    switch (theme) {
+      case "light":
+        return "☀️"
+      case "dark":
+        return "🌙"
+      default:
+        return "🖥️"
+    }
+  }
+
   return (
-    <button onClick={cycleTheme} className="theme-toggle">
-      Theme: {theme}
+    <button onClick={cycleTheme} className="theme-toggle" title={`Theme: ${theme}`}>
+      {getIcon()}
     </button>
   )
 }
