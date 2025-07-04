@@ -9,14 +9,14 @@ function App() {
   const [input, setInput] = useState("")
 
   const fetchNotes = async () => {
-    const res = await fetch("http://backend:5111/api/notes")
+    const res = await fetch('${import.meta.env.VITE_BACKEND_URL}/api/notes')
     const data = await res.json()
     setNotes(data)
   }
 
   const addNote = async () => {
     if (!input.trim()) return
-    await fetch("http://backend:5111/api/notes", {
+    await fetch('${import.meta.env.VITE_BACKEND_URL}/api/notes', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: input }),
@@ -26,7 +26,7 @@ function App() {
   }
 
   const deleteNote = async (id) => {
-    await fetch(`http://backend:5111/api/notes/${id}`, {
+    await fetch('${import.meta.env.VITE_BACKEND_URL}/api/notes/${id}', {
       method: "DELETE",
     })
     fetchNotes()
