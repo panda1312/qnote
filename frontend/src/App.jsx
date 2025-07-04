@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import NoteInput from './components/NoteInput'
 import NoteList from './components/NoteList'
+import ThemeToggle from "./components/ThemeToggle"
 
 function App() {
   const [notes, setNotes] = useState([])
@@ -31,6 +32,7 @@ function App() {
   return (
     <main className="container">
       <Header />
+      <ThemeToggle />
       <NoteInput input={input} setInput={setInput} addNote={addNote} />
       <NoteList notes={notes} />
     </main>
