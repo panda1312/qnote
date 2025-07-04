@@ -3,8 +3,8 @@ services:
   backend:
     build: ./backend
     ports:
-      - "5000:5000"
+      - "5111:5111"
   frontend:
     build: ./frontend
     ports:
-      - "3000:3000"
+      - "3111:3111"
