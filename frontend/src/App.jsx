@@ -5,6 +5,7 @@ import NoteList from './components/NoteList'
 import ThemeToggle from "./components/ThemeToggle"
 
 function App() {
+  console.log("VITE_BACKEND_URL:", import.meta.env.VITE_BACKEND_URL)
   const [notes, setNotes] = useState([])
   const [input, setInput] = useState("")
 
@@ -38,7 +39,6 @@ function App() {
   }, [])
 
   return (
-    console.log("VITE_BACKEND_URL:", import.meta.env.VITE_BACKEND_URL);
    <main className="container">
       <div className="header-bar">
         <Header />
