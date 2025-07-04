@@ -85,8 +85,27 @@ body {
 }
 
 .note {
+  position: relative;
   padding: 1rem;
   margin-bottom: 0.75rem;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: var(--radius);
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #ff3b30; /* Apple-style destructive red */
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  opacity: 1;
 }
